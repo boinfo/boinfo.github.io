@@ -1,2 +1,2 @@
 # boinfo.github.io
-©Info Servef
+©Info Server
