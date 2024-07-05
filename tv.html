@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Streaming</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/video.js/dist/video-js.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/video.js/dist/video.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        .player {
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="logo">
+        <img src="https://image.tsports.com/images/mobile_logo/1719672720-LIVE.jpg" alt="T Sports Live 02 Logo">
+        <h2>T Sports Live 02</h2>
+    </div>
+    <video-js id="live02" class="player vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{}'>
+        <source src="https://live-cdn.tsports.com/live-02/index.m3u8" type="application/x-mpegURL">
+    </video-js>
+
+    <div class="logo">
+        <img src="https://image.tsports.com/images/mobile_logo/1719127161-LIVE.jpg" alt="T Sports Live 01 Logo">
+        <h2>T Sports Live 01</h2>
+    </div>
+    <video-js id="live01" class="player vjs-default-skin" controls preload="auto" width="640" height="360" data-setup='{}'>
+        <source src="https://live-cdn.tsports.com/live-01/index.m3u8" type="application/x-mpegURL">
+    </video-js>
+
+    <script>
+        // Initialize Video.js players
+        var player01 = videojs('live01');
+        var player02 = videojs('live02');
+    </script>
+</body>
+</html>
